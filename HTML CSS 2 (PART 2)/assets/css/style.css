@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+
+header a img{
+    width: 50px;
+    height: 50px;
+}
+
+
+body{
+    font-family: 'Roboto';
+    line-height: 80px;
+    font-weight: 900;
+}
+
+header nav ul li a{
+    color: red;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+header nav ul li .one{
+    color: blue;
+}
+
+header nav ul li .two{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+header nav ul li .three{
+    color: green;
+}
+
+
+header nav ul li .four{
+    color: grey;
+}
+
+div{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
