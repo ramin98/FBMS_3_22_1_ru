@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Heebo;
+  src: url("/assets/fonts/Heebo-Regular.ttf");
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:focus {
+  color: black;
+}
+
+body {
+  font-family: Heebo;
+  color: #21243d;
+}
+
+header {
+  padding: 27px 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  gap: 33px;
+}
+
+header nav ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+header nav ul li a:hover {
+  color: #00a8cc;
+  transform: scale(1.2);
+}
+
+main {
+  margin-top: 160px;
+}
+
+main section.section-first {
+  width: 860px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main section.section-first div h1 {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+main section.section-first div p {
+  width: 497px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+main section.section-first div button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: #ff6464;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 38px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main section.section-first div button:hover {
+  background-color: #00a8cc;
+}
+
+main section.section-first img {
+  filter: drop-shadow(10px 10px 0px #edf7fa);
+}
+
+main section.section-second {
+  width: 100%;
+  background-color: #edf7fa;
+  margin-top: 71px;
+}
+
+main section.section-second .section-second-container {
+  margin: 0 auto;
+  width: 860px;
+  padding: 27px 0px 43px 0px;
+}
+
+main section.section-second .section-second-container .header-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section.section-second .section-second-container .header-link h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+main section.section-second .section-second-container .header-link a {
+  font-size: 16px;
+  color: #00a8cc;
+  font-weight: 400;
+}
+
+main section.section-second .section-second-container .post-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  margin-top: 11px;
+}
+
+main section.section-second .section-second-container .post-list li {
+  width: 50%;
+  padding: 35px 22px 25px 22px;
+  background-color: white;
+}
+
+main section.section-second .section-second-container .post-list li h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+main section.section-second .section-second-container .post-list li .date {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 17px;
+}
+
+main section.section-second .section-second-container .post-list li .info {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 11px;
+}
+
+main section.section-three {
+  width: 860px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+main section.section-three h2 {
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+main section.section-three ul {
+  margin-top: 7px;
+}
+
+main section.section-three ul li {
+  display: flex;
+  gap: 18px;
+  margin-top: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+main section.section-three ul li:first-child {
+  margin-top: 0px;
+}
+
+main section.section-three ul li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main section.section-three ul li div h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+main section.section-three ul li div .date-info .date {
+  border-radius: 13px;
+  background-color: #142850;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 0 10px;
+}
+
+main section.section-three ul li div .date-info .info {
+  margin-left: 26px;
+  font-size: 20px;
+  color: #8695a4;
+  font-weight: 400;
+}
+
+main section.section-three ul li div .list-item-info {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer {
+  padding: 51px 0 54px 0;
+  margin-top: 83px;
+}
+
+footer ul {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+footer ul li a svg path {
+  transition: 0.3s;
+}
+
+footer ul li a:hover svg path {
+  fill: #00a8cc;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 26px;
+}
