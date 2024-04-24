@@ -43,6 +43,31 @@ header {
   justify-content: flex-end;
 }
 
+header nav .burger-menu{
+  display: none;
+  position: relative;
+  height: 18px;
+  width: 30px;
+}
+header nav .burger-menu span{
+  height: 1px;
+  width: 30px;
+  background-color: black;
+  position: absolute;
+}
+
+header nav .burger-menu span:nth-child(1){
+  top: 0;
+}
+
+header nav .burger-menu span:nth-child(2){
+  top: 9px;
+}
+
+header nav .burger-menu span:nth-child(3){
+  bottom: 0;
+}
+
 header nav ul {
   display: flex;
   gap: 33px;
@@ -97,6 +122,7 @@ main section.section-first div button {
   transition: 0.3s;
   cursor: pointer;
 }
+
 main section.section-first div button:hover {
   background-color: #00a8cc;
 }
@@ -228,14 +254,15 @@ main section.section-three ul li div .list-item-info {
 footer {
   padding: 51px 0 54px 0;
   margin-top: 83px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer ul {
   display: flex;
   gap: 35px;
   align-items: center;
-  margin: 0 auto;
-  width: fit-content;
 }
 
 footer ul li a svg path {
@@ -251,4 +278,51 @@ footer p {
   font-weight: 400;
   text-align: center;
   margin-top: 26px;
+}
+
+@media screen and (max-width: 860px) {
+
+  header{
+    padding: 20px 18px;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header nav .burger-menu{
+    display: block;
+  }
+
+  main {
+    margin-top: 33px;
+  }
+
+  main section.section-first {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 34px;
+    padding: 0px 23px;
+  }
+
+  main section.section-first div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  main section.section-first div h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  main section.section-first div p {
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  main section.section-first div button {
+    margin-top: 25px;
+  }
 }
