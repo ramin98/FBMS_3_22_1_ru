@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: Heebo;
-  src: url("/assets/fonts/Heebo-Regular.ttf");
+  src: url("assets/fonts/Heebo-Regular.ttf");
 }
 
 ul,
@@ -43,28 +43,28 @@ header {
   justify-content: flex-end;
 }
 
-header nav .burger-menu{
+header nav .burger-menu {
   display: none;
   position: relative;
   height: 18px;
   width: 30px;
 }
-header nav .burger-menu span{
+header nav .burger-menu span {
   height: 1px;
   width: 30px;
   background-color: black;
   position: absolute;
 }
 
-header nav .burger-menu span:nth-child(1){
+header nav .burger-menu span:nth-child(1) {
   top: 0;
 }
 
-header nav .burger-menu span:nth-child(2){
+header nav .burger-menu span:nth-child(2) {
   top: 9px;
 }
 
-header nav .burger-menu span:nth-child(3){
+header nav .burger-menu span:nth-child(3) {
   bottom: 0;
 }
 
@@ -281,8 +281,7 @@ footer p {
 }
 
 @media screen and (max-width: 860px) {
-
-  header{
+  header {
     padding: 20px 18px;
   }
 
@@ -290,7 +289,7 @@ footer p {
     display: none;
   }
 
-  header nav .burger-menu{
+  header nav .burger-menu {
     display: block;
   }
 
@@ -316,13 +315,97 @@ footer p {
     font-size: 32px;
     line-height: 40px;
   }
-  
+
   main section.section-first div p {
     width: 100%;
     margin-top: 25px;
   }
-  
+
   main section.section-first div button {
     margin-top: 25px;
+  }
+
+  main section.section-second {
+    margin-top: 58px;
+  }
+
+  main section.section-second .section-second-container {
+    width: 100%;
+    padding: 1px 10px 38px 10px;
+  }
+
+  main section.section-second .section-second-container .header-link {
+    justify-content: center;
+  }
+
+  main section.section-second .section-second-container .header-link h2 {
+    font-size: 18px;
+    line-height: 60px;
+  }
+
+  main section.section-second .section-second-container .header-link a {
+    display: none;
+  }
+
+  main section.section-second .section-second-container .post-list {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  main section.section-second .section-second-container .post-list li {
+    width: 100%;
+    padding: 12px 9px 9px 22px;
+  }
+
+  main section.section-second .section-second-container .post-list li h3 {
+    font-size: 22px;
+  }
+
+  main section.section-second .section-second-container .post-list li .date {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  main section.section-three {
+    width: 100%;
+    padding: 0 14px;
+  }
+
+  main section.section-three h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  main section.section-three ul {
+    margin-top: 0px;
+    overflow-y: scroll;
+    height: 490px;
+  }
+
+  main section.section-three ul li {
+    gap: 17px;
+    margin-top: 20px;
+    padding-bottom: 17px;
+    flex-direction: column;
+  }
+
+  main section.section-three ul li div h3 {
+    font-size: 24px;
+  }
+
+  main section.section-three ul li div .date-info {
+    margin-top: 16px;
+  }
+
+  main section.section-three ul li div .date-info .date {
+    font-size: 16px;
+  }
+
+  main section.section-three ul li div .date-info .info {
+    font-size: 16px;
+  }
+
+  main section.section-three ul li div .list-item-info {
+    margin-top: 24px;
   }
 }
