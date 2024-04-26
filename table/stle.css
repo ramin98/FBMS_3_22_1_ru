@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 24px;
+  background-color: #121825;
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: #121825;
+}
+
+table tr {
+  border-bottom: 1px solid grey;
+}
+
+table thead tr {
+  border-bottom: none;
+}
+
+table thead {
+  background-color: black;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+table tbody {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+table thead tr th {
+  padding: 14px 0px;
+}
+
+table tbody tr td {
+  padding: 23px 0px;
+}
+
+table thead tr th:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+table thead tr th:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
