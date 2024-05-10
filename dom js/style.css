@@ -1,0 +1,28 @@
+button{
+    transition: 1s;
+}
+
+div form{
+    display: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    transition: 1s;
+}
+
+.voice-container{
+    width: 400px;
+    height: 50px;
+background-color: blue;}
+
+.voice{
+ height: 50px;
+ width: 0%;
+ background-color: orange;
+ 
+}
