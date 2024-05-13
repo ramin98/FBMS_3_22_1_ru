@@ -244,27 +244,27 @@ let goods = [
   },
 ];
 
-let voiceContainer = document.querySelector(".voice-container");
-let voice = document.querySelector(".voice");
-let text = document.querySelector("#text");
+// let voiceContainer = document.querySelector(".voice-container");
+// let voice = document.querySelector(".voice");
+// let text = document.querySelector("#text");
 
+// let x;
+// function rangeHandler(){
+//   voiceContainer.addEventListener("mousemove", rangeHandlerMove);
+// }
 
-let x
-let flag = false
-if(flag === false){
-    voiceContainer.addEventListener('mousemove', (ev) => {
-        voiceContainer.addEventListener('mousedown', (e) => {
-            x = ev.offsetX / 4
-            voice.style = `width: ${x}%;`
-            text.innerText = Math.floor(x)
-        })
-    })
-}
+// function rangeHandlerMove(ev){
+//     x = ev.offsetX / 4;
+//     voice.style = `width: ${x}%;`;
+//     text.innerText = Math.floor(x);
+// }
 
-voiceContainer.addEventListener('click', (e) => {
-    voice.style = `width: ${x}%;`
-    text.innerText = Math.floor(x)
-})
+// function rangeHandlerRemove(){
+//   voiceContainer.removeEventListener('mousemove',rangeHandlerMove)
+// }
+
+// voiceContainer.addEventListener("mousedown",rangeHandler);
+// voiceContainer.addEventListener("mouseup", rangeHandlerRemove);
 
 // goods.forEach((item) => {
 //   let li = document.createElement("li");
@@ -302,15 +302,9 @@ voiceContainer.addEventListener('click', (e) => {
 //     })
 // })
 
-
-
 // document.addEventListener('scrollend', function(ev){
 //     console.log('ok')
 // })
-
-
-
-
 
 // for (let index = 0; index < buttons.length; index++) {
 //   const element = buttons[index];
@@ -331,3 +325,41 @@ voiceContainer.addEventListener('click', (e) => {
 // }
 
 // showAlert.removeEventListener('click', showFunction)
+
+// let inputValue = document.getElementsByName("gender");
+// let getInfo = document.getElementById("getInfo");
+
+// inputValue.forEach((item) => {
+//   item.addEventListener("click", (ev) => {
+//     console.log(ev.target.value)
+//   });
+// });
+
+
+let userName = document.getElementById("userName");
+let userEmail = document.getElementById("userEmail");
+let userPassword = document.getElementById("userPassword");
+let checkedInfo = document.getElementById("checkedInfo");
+let send = document.getElementById("send");
+let par = document.getElementById("par");
+
+send.addEventListener('click', () => {
+  if(checkedInfo.checked){
+    console.log(userName.value, userEmail.value, userPassword.value)
+    par.innerHTML = `<p>${userName.value}</p>
+    <p>${userEmail.value}</p>
+    <p>${userPassword.value}</p>`
+  }else{
+    console.log('err') }
+})
+
+const regex = /^\+994-(50|51|70|55)-\d{3}-\d{2}-\d{2}$/;
+userName.addEventListener('input', (ev) => {
+  if(regex.test(ev.target.value)){
+    par.innerText = 'OKAY'
+  }else{
+    par.innerText = 'WRONG'
+
+  }
+ 
+})
