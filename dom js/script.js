@@ -363,3 +363,63 @@ userName.addEventListener('input', (ev) => {
   }
  
 })
+
+let form = document.querySelector("form");
+let inputLogin = document.querySelector("form input[name=login]");
+let inputEmail = document.querySelector("form input[name=email]");
+let inputPassword = document.querySelector("form input[name=password]");
+let inputYear = document.querySelector("form input[name=year]");
+
+console.log(inputLogin);
+inputLogin.addEventListener("input", (ev) => {
+  if (ev.target.value.length > 8) {
+    ev.target.nextElementSibling.style = "display:none";
+  } else {
+    ev.target.nextElementSibling.style = "display:block";
+  }
+});
+
+inputEmail.addEventListener("input", (ev) => {
+  if (ev.target.value.endsWith(".com")) {
+    ev.target.nextElementSibling.style = "display:none";
+  } else {
+    ev.target.nextElementSibling.style = "display:block";
+  }
+});
+
+inputPassword.addEventListener("input", (ev) => {
+  if (ev.target.value.length > 8) {
+    ev.target.nextElementSibling.style = "display:none";
+  } else {
+    ev.target.nextElementSibling.style = "display:block";
+  }
+});
+
+inputYear.addEventListener("input", (ev) => {
+  if (ev.target.value > 18) {
+    ev.target.nextElementSibling.style = "display:none";
+  } else {
+    ev.target.nextElementSibling.style = "display:block";
+  }
+});
+
+form.addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  let obj = {};
+  let formData = new FormData(form);
+  if (
+    formData.get("login").length < 8 ||
+    !formData.get("email").endsWith(".com") ||
+    formData.get("password").length < 8 ||
+    formData.get("year") < 18
+  ) {
+    alert("NOT VALID FORMAT");
+    return;
+  } else {
+    let arrayOfValue = [...formData];
+    for (const [key, value] of arrayOfValue) {
+      obj[key] = value;
+    }
+    console.log(obj);
+  }
+});
