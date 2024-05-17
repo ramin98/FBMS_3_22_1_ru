@@ -365,43 +365,67 @@ userName.addEventListener('input', (ev) => {
 })
 
 let form = document.querySelector("form");
+let formButton = document.querySelector("form button");
 let inputLogin = document.querySelector("form input[name=login]");
 let inputEmail = document.querySelector("form input[name=email]");
 let inputPassword = document.querySelector("form input[name=password]");
 let inputYear = document.querySelector("form input[name=year]");
+let inputs = document.querySelectorAll('form input')
 
-console.log(inputLogin);
-inputLogin.addEventListener("input", (ev) => {
-  if (ev.target.value.length > 8) {
-    ev.target.nextElementSibling.style = "display:none";
-  } else {
-    ev.target.nextElementSibling.style = "display:block";
-  }
-});
+let activeFormButton = true
+formButton.disabled = activeFormButton
 
-inputEmail.addEventListener("input", (ev) => {
-  if (ev.target.value.endsWith(".com")) {
-    ev.target.nextElementSibling.style = "display:none";
-  } else {
-    ev.target.nextElementSibling.style = "display:block";
-  }
-});
+function checkButton(){
+  let formData = new FormData(form);
+  if (
+    formData.get("login").length < 8 ||
+    !formData.get("email").endsWith(".com") ||
+    formData.get("password").length < 8 ||
+    formData.get("year") <= 18
+  ){
+    activeFormButton = true
+    formButton.disabled = activeFormButton
 
-inputPassword.addEventListener("input", (ev) => {
-  if (ev.target.value.length > 8) {
-    ev.target.nextElementSibling.style = "display:none";
-  } else {
-    ev.target.nextElementSibling.style = "display:block";
+  }else{
+    activeFormButton = false
+    formButton.disabled = activeFormButton
   }
-});
+}
 
-inputYear.addEventListener("input", (ev) => {
-  if (ev.target.value > 18) {
-    ev.target.nextElementSibling.style = "display:none";
-  } else {
-    ev.target.nextElementSibling.style = "display:block";
-  }
-});
+inputs.forEach((item) => {
+item.addEventListener('input', (ev) => {
+     if(ev.target.name === 'login'){
+      if (inputLogin.value.length > 8) {
+        ev.target.nextElementSibling.style = "display:none";
+      } else {
+        ev.target.nextElementSibling.style = "display:block";
+      }
+     }
+     if(ev.target.name === 'email'){
+      if (inputEmail.value.endsWith(".com")) {
+        ev.target.nextElementSibling.style = "display:none";
+      } else {
+        ev.target.nextElementSibling.style = "display:block";
+      }
+     }
+     if(ev.target.name === 'password'){
+      if (inputPassword.value.length > 8) {
+        ev.target.nextElementSibling.style = "display:none";
+      } else {
+        ev.target.nextElementSibling.style = "display:block";
+      }
+     }
+     if(ev.target.name === 'year'){
+      if (inputYear.value >= 18) {
+        ev.target.nextElementSibling.style = "display:none";
+      } else {
+        ev.target.nextElementSibling.style = "display:block";
+      }
+     }
+     checkButton()
+  })
+ 
+})
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
@@ -411,12 +435,13 @@ form.addEventListener("submit", (ev) => {
     formData.get("login").length < 8 ||
     !formData.get("email").endsWith(".com") ||
     formData.get("password").length < 8 ||
-    formData.get("year") < 18
+    formData.get("year") <= 18
   ) {
     alert("NOT VALID FORMAT");
     return;
   } else {
     let arrayOfValue = [...formData];
+    console.log(arrayOfValue)
     for (const [key, value] of arrayOfValue) {
       obj[key] = value;
     }
