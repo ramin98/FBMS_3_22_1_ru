@@ -46,24 +46,28 @@
 <p id="par"></p>
 <button id="getInfo">SEND</button>
 
-    <form action="">
-        <label>
-            <input type="text" name="login">
-            <p>NOT VALID FORMAT</p>
-        </label>
-        <label>
-        <input  type="email" name="email">
+    <form>
+      <label>
+        <input type="text" name="login" placeholder="LOGIN" />
         <p>NOT VALID FORMAT</p>
-        </label>
-        <label>
-        <input type="password" name="password">
+      </label>
+      <label>
+        <input type="email" name="email" placeholder="EMAIL" />
         <p>NOT VALID FORMAT</p>
-        </label>
-        <label>
-        <input type="number" name="year">
+      </label>
+      <label>
+        <input type="password" name="password" placeholder="PASSWORD" />
         <p>NOT VALID FORMAT</p>
-        </label>
-        <button>SEND</button>
+      </label>
+      <label>
+        <input type="number" name="year" placeholder="YEAR" />
+        <p>NOT VALID FORMAT</p>
+      </label>
+      <select name="select-gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <button disabled>SEND</button>
     </form>
     <script src="script.js"></script>
 </body>
