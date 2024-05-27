@@ -1,0 +1,37 @@
+/* styles.css */
+.video-container {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+#videoRangeContainer {
+    width: 600px;
+    height: 60px;
+    margin: auto;
+border: 2px solid black;}
+
+#videoRange {
+    width: 600px;
+    background-color: blue;
+    height: 60px;
+}
+
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#duration {
+    margin-left: 10px;
+    font-size: 16px;
+}
