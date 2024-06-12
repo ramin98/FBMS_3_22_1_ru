@@ -1,9 +1,9 @@
-function User({username,name, email, deleteUser, index}) {
+function User({name, department, position, index}) {
     return (
         <li>
             <p>{name}</p>
-            <p>{username}</p>
-            <p>{email}</p>
+            <p>{department}</p>
+            <p>{position}</p>
             <button onClick={() => deleteUser(index)}>X</button>
         </li>
     )
