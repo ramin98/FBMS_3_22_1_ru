@@ -248,8 +248,9 @@ app.get('/films', (req,res) => {
 
 app.post('/films-add', (req,res) => {
     films.push(req.body)
-    res(req.body.title)
+    res.json({text:req.body.title})
 })
+
 
 app.listen(HOST, () => {
   console.log(HOST + " OK");
