@@ -15,24 +15,10 @@ import About from "./components/About"
 
 export const MyContext = createContext()
 
-export function SubmitButton() {
-  const navigation = useNavigation();
-  if (navigation.formMethod) {
-    console.log(navigation.formMethod); // post
-  }
-
-  return (
-    <Form method="POST">
-      <button>Submit</button>
-    </Form>
-  );
-}
-
 function App() {
   let [state, dispatch] = useReducer(reducer, initialState)
   return (
     <MyContext.Provider value={{ state, dispatch }}>
-      <SubmitButton/>
       <Routes>
         <Route path='/' element={<Mains />}>
           <Route path="/goods" element={<GoodsList />}>
